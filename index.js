@@ -2,8 +2,10 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-let bodyParser = require('body-parser');
-app.use(bodyParser.json());
+//let bodyParser = require('body-parser');
+//app.use(bodyParser.json());
+
+app.get("/", (req, res) => res.send("Hello World!"));
 
 const products = [
 {

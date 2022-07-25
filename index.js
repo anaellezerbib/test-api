@@ -9,19 +9,37 @@ app.get("/", (req, res) => {
 
 app.get("/products", (req,res) => {
   const products = [
-  {
-    id: 1,
-    name: "hammer",
-  },
-  {
-    id: 2,
-    name: "screwdriver",
-  },
-  {
-    id: 3,
-    name: "wrench",
-  },
- ];
+{
+  id: 1,
+  name: "Ivanhoe",
+  author: "Sir Walter Scott",
+},
+{
+  id: 2,
+  name: "Colour Magic",
+  author: "Terry Pratchett",
+},
+{
+  id: 3,
+  name: "The Bluest eye",
+  author: "Toni Morrison",
+},
+{
+  id: 4,
+  name: "Belle du Seigneur",
+  author: "Albert Cohen",
+},
+{
+  id: 5,
+  name: "1984",
+  author: "George Orwell",
+},
+{
+  id: 6,
+  name: "Harry Potter and the Philosopher's stone",
+  author: "J. K. Rowling",
+},
+];
 
  res.json(products);
 });

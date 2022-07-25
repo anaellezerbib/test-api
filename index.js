@@ -41,6 +41,9 @@ app.get("/products", (req,res) => {
 },
 ];
 
+res.json(products);
+});
+
 app.post('/products', function(req, res) {
   const newProduct = { ...req.body, id: products.length + 1 }
   products = [ ...products, newProduct]
@@ -65,9 +68,6 @@ app.delete('/products/:id', function(req, res) {
   res.json(deletedProduct);
 });
 
-
- res.json(products);
-});
 
 
 

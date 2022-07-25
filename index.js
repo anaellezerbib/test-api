@@ -41,6 +41,13 @@ app.get("/products", (req,res) => {
 },
 ];
 
+app.post('/products', function(req, res) {
+  const newProduct = { ...req.body, id: products.length + 1 }
+  products = [ ...products, newProduct]
+  res.json(newProduct);
+});
+
+
  res.json(products);
 });
 

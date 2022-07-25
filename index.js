@@ -47,6 +47,18 @@ app.post('/products', function(req, res) {
   res.json(newProduct);
 });
 
+app.put('/products', function(req, res) {
+  let updatedProduct;
+  products = products.map(p => {
+    if (p.id === req.body.id) {
+      updatedProduct = { ...p, ...req.body };
+      return updatedProduct;
+    }
+    return p;
+  })
+  res.json(updatedProduct);
+});
+
 
  res.json(products);
 });

@@ -59,6 +59,12 @@ app.put('/products', function(req, res) {
   res.json(updatedProduct);
 });
 
+app.delete('/products/:id', function(req, res) {
+  const deletedProduct = products.find(p => p.id === +req.params.id);
+  products = products.filter(p => p.id !== +req.params.id);
+  res.json(deletedProduct);
+});
+
 
  res.json(products);
 });

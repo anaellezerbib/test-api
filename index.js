@@ -13,31 +13,37 @@ app.get("/products", (req,res) => {
   id: 1,
   name: "Ivanhoe",
   author: "Sir Walter Scott",
+  year: "1819",
 },
 {
   id: 2,
   name: "Colour Magic",
   author: "Terry Pratchett",
+  year: "1983",
 },
 {
   id: 3,
   name: "The Bluest eye",
   author: "Toni Morrison",
+  year: "1970 ",
 },
 {
   id: 4,
   name: "Belle du Seigneur",
   author: "Albert Cohen",
+  year: "1968",
 },
 {
   id: 5,
   name: "1984",
   author: "George Orwell",
+  year: "1949",
 },
 {
   id: 6,
   name: "Harry Potter and the Philosopher's stone",
   author: "J. K. Rowling",
+  year: "1997",
 },
 ];
 

@@ -43,7 +43,7 @@ it will display:
 ## Post request 
 If you want to add a new ressource, hence a new book, use the post request. 
 
-For example, if I want to add the book Hamlet by Shakespeare written in 1603, I write this post request with 
+For example, if I want to add the book Hamlet by Shakespeare written in 1603, I write this post request with the following JSON text:
 
 > {
 >	"name": "Hamlet",

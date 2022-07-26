@@ -57,19 +57,19 @@ In the (JSON) text, you indicate the id and then write the modifications.
 For instance, if there is a 
 
 > {
-		"id": 11,
-		"name": "Anna Karénine",
-		"author": "Léon Tolstoï",
-		"year": "1878",
-		"availability": "235"
+> 		"id": 11,
+> 		"name": "Anna Karénine",
+> 		"author": "Léon Tolstoï",
+> 		"year": "1878",
+> 		"availability": "235"
 > 	} 
 
-	can become 
+can become 
 	
-> 		{
-		"id": 11,
-		"name": "Anna Karénine",
-		"author": "Léon Tolstoï",
-		"year": "1878",
-		"availability": "235"
+> 	{
+> 		"id": 11,
+> 		"name": "Anna Karénine",
+> 		"author": "Léon Tolstoï",
+> 	"year": "1878",
+> 		"availability": "235"
 > 	}

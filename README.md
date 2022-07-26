@@ -64,7 +64,7 @@ For instance, if there is an availability update
 > 		"availability": "235"
 > 	} 
 
-can become 
+becomes: 
 	
 > 	{
 > 		"id": 11,

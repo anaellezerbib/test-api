@@ -4,8 +4,8 @@
 This API is managed by an online book retailer. You can ask get information on books, see if they are available and add new books to the retailer. 
 
 ## How to run this API? 
-- First of all, you need to clone this project on a new github repository. 
-- After that, you need to deploy it through heroku
+- First of all, you need to clone this project on a new GitHub repository. 
+- After that, you need to deploy it through Heroku
 - Finally, you can use either Postman or Insomnia to run every requests you want, every thing is detailled right here...
 
 
@@ -82,14 +82,5 @@ becomes:
 If you want to delete some data, you need to run the following request:     https://first-api-of-anaelle.herokuapp.com/products/13
 
 where the last number indicates the id of the book you want to delete. 
-
-
-
-
-
-
-
-
-
 
 

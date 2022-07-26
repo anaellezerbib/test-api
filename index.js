@@ -3,12 +3,14 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+let bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.get("/products", (req,res) => {
-  const products = [
+let products = [
 {
   id: 1,
   name: "Ivanhoe",
@@ -45,14 +47,32 @@ app.get("/products", (req,res) => {
   author: "J. K. Rowling",
   year: "1997",
 },
+{
+  id: 7,
+  name: "Les cerfs-volants",
+  author: "Romain Gary",
+  year: "1997",
+},
+{
+  id: 8,
+  name: "Les racines du ciel",
+  author: "Romain Gary",
+  year: "1997",
+},
 ];
 
+app.get("/products", (req,res) => {
 res.json(products);
 });
 
+app.get("/products/:id", (req, res) => {
+  res.json(products.find((p) => p.id === +req.params.id));
+});
+
 app.post('/products', function(req, res) {
-  const newProduct = { ...req.body, id: products.length + 1 }
-  products = [ ...products, newProduct]
+  console.log(req.body);
+  const newProduct = { ...req.body, id: products.length + 1 };
+  products = [ ...products, newProduct];
   res.json(newProduct);
 });
 

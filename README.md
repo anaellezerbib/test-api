@@ -4,6 +4,11 @@
 
 This API is managed by an online book retailer. You can ask get information on books, see if they are available and add new books to the retailer. 
 
+## How to run this API? 
+- First of all, you need to clone this project on a new github repository. 
+- After that, you need to deploy it through heroku
+- Finally, you can use either Postman or Insomnia to run every requests you want, every thing is detailled right here...
+
 
 ## Get request 
 The get request gives you the title, the author and the released year of the book when you give the id. You can also see the avaibility of this book.

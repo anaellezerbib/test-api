@@ -38,3 +38,38 @@ it will display:
                     
 ## Post request: 
 If you want to add a new ressource, hence a new book, use the post request. 
+
+For example, if I want to add the book Hamlet by Shakespeare written in 1603, I write this post request with 
+
+> {
+>	"name": "Hamlet",
+>	"author": "Shakespeare",
+>	"year": "1603",
+>	"availability":"185"
+>	}
+
+It will automatically create a new id with those features. To check if the book has been successfully added, I can do a get request!
+
+## Put request: 
+If you want to modify some data, you have to run a put request. 
+In the (JSON) text, you indicate the id and then write the modifications. 
+
+For instance, if there is a 
+
+> {
+		"id": 11,
+		"name": "Anna Karénine",
+		"author": "Léon Tolstoï",
+		"year": "1878",
+		"availability": "235"
+> 	} 
+
+	can become 
+	
+> 		{
+		"id": 11,
+		"name": "Anna Karénine",
+		"author": "Léon Tolstoï",
+		"year": "1878",
+		"availability": "235"
+> 	}

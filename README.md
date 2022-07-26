@@ -36,4 +36,5 @@ it will display:
 >  }]
                     
                     
-The post function 
+## Post request: 
+If you want to add a new ressource, hence a new book, use the post request. 

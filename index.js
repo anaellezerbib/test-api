@@ -102,7 +102,13 @@ app.delete('/products/:id', function(req, res) {
   res.json(deletedProduct);
 });
 
-
+try {
+  const result = JSON.parse('');
+  console.log(result);
+} catch (err) {
+  // 👇️ SyntaxError: Unexpected end of JSON input
+  console.log('error', err);
+}
 
 
 app.listen(process.env.PORT || 8000, () => {

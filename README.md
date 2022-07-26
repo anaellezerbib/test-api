@@ -36,7 +36,7 @@ it will display:
 >  }]
                     
                     
-## Post request: 
+## Post request 
 If you want to add a new ressource, hence a new book, use the post request. 
 
 For example, if I want to add the book Hamlet by Shakespeare written in 1603, I write this post request with 
@@ -50,11 +50,11 @@ For example, if I want to add the book Hamlet by Shakespeare written in 1603, I 
 
 It will automatically create a new id with those features. To check if the book has been successfully added, I can do a get request!
 
-## Put request: 
+## Put request
 If you want to modify some data, you have to run a put request. 
 In the (JSON) text, you indicate the id and then write the modifications. 
 
-For instance, if there is a 
+For instance, if there is an availability update
 
 > {
 > 		"id": 11,
@@ -71,5 +71,21 @@ can become
 > 		"name": "Anna Karénine",
 > 		"author": "Léon Tolstoï",
 > 	"year": "1878",
-> 		"availability": "235"
+> 		"availability": "300"
 > 	}
+
+## Delete request
+If you want to delete some data, you need to run the following request:     https://first-api-of-anaelle.herokuapp.com/products/13
+
+where the last number indicates the id of the book you want to delete. 
+
+
+
+
+
+
+
+
+
+
+

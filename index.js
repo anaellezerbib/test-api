@@ -77,6 +77,21 @@ app.get("/products/:id", (req, res) => {
   res.json(products.find((p) => p.id === +req.params.id));
 });
 
+//console.log(req.products[0].name);
+
+app.get("/books/:name", (req, res) => { //API endpoint to your API on Heroku that get a GET request for a book name, p.name only exists inside the find, find iterates through the data, evaluates if it's true
+  res.json(products.find((p) => {
+                                                    //console.log(p.name); //help find 
+                                                    //console.log(String(p.name));
+                                                    if (String(p.name) == String(req.params.name)){
+                                                        console.log(String(p.name), String(req.params.name));
+                                                        return true;
+                                                        } // IT WORKS 
+                                                        // Then we have to stock the data in a field 
+                                                }));
+  console.log('data from books name:',req.params.name);
+});
+
 app.post('/products', function(req, res) {
   console.log(req.body);
   const newProduct = { ...req.body, id: products.length + 1 };
@@ -103,10 +118,10 @@ app.delete('/products/:id', function(req, res) {
 });
 
 try {
-  const result = JSON.parse('');
+  const result = JSON.stringify('');
   console.log(result);
 } catch (err) {
-  // 👇️ SyntaxError: Unexpected end of JSON input
+  //SyntaxError: Unexpected end of JSON input
   console.log('error', err);
 }
 

@@ -67,6 +67,13 @@ let products = [
   year: "1956",
   availability: "160",
 },
+{
+  id: 9,
+  name: "My life in Tel Aviv",
+  author: "Me",
+  year: "2022",
+  availability: "255",
+}
 ];
 
 app.get("/products", (req,res) => {
@@ -91,6 +98,25 @@ app.get("/books/:name", (req, res) => { //API endpoint to your API on Heroku tha
                                                 }));
   console.log('data from books name:',req.params.name);
 });
+
+app.get("/writer/:author", (req, res) => { // on veut qu'il affiche tous les livres 
+    res.json(products.filter((p) => {
+                                //on veut tester sur tous les livres 
+                               // console.log(products.length)
+                                //for(let i = 0; i< products.length; i++){
+                                        if (String(p.author) == String(req.params.author)){
+                                                       console.log("The name of the book is ", String(p.name), "by", String(req.params.author));
+                                                        return true;
+                                  }
+                    //}
+     }));
+    //console.log('data from books name:', req.params.author);
+});
+        
+        
+
+
+
 
 app.post('/products', function(req, res) {
   console.log(req.body);
